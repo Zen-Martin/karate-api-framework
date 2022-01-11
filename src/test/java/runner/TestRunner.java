@@ -7,7 +7,7 @@ import com.intuit.karate.KarateOptions;
 
 
 @RunWith(Karate.class)
-@KarateOptions(features = { "src/test/resources/sample.feature"})
+@KarateOptions(features = { "src/test/resources/ui_automation.feature"})
 public class TestRunner {
 
     @BeforeClass
