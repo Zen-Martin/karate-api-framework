@@ -8,7 +8,6 @@ Feature: API sample test
     Then status 200
     And print response
 
-
 #  Scenario: POST method
 #    Given path "/users"
 #    And request {"name": "Patric","job": "Gigolo"}
