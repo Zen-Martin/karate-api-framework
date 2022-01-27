@@ -1,18 +1,16 @@
 package runner;
 
-import com.intuit.karate.junit4.Karate;
-import org.junit.BeforeClass;
-import org.junit.runner.RunWith;
-import com.intuit.karate.KarateOptions;
+import com.intuit.karate.Results;
+import com.intuit.karate.Runner;
+import static org.junit.Assert.*;
+import org.junit.Test;
 
-
-@RunWith(Karate.class)
-@KarateOptions(features = { "src/test/resources"})
 public class TestRunner {
 
-    @BeforeClass
-    public static void before(){
-
+    @Test
+    public void testParallel() {
+        Results results = Runner.path("src/test/resources").parallel(5);
+        assertTrue(results.getErrorMessages(), results.getFailCount() == 0);
     }
 
 }
