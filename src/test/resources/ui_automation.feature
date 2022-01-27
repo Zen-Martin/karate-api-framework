@@ -1,5 +1,7 @@
 Feature: UI sample test
 
+  @Bug_1948
+	@TEST_OF-209
   Scenario: simple google search
     * def startUrl = "https://www.google.com/"
     * def searchRequest = "karate automation framework"
